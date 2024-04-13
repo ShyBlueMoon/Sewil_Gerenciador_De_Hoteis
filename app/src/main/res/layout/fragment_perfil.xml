@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_primary"
+    tools:context=".ui.perfil.PerfilFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        app:cardBackgroundColor="#E2E7EA"
+        android:layout_height="match_parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/caixaExterna"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageLogoPerfil"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/logo_sewil"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textNomePaginaPerfil"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/orbitron_black"
+                android:gravity="center"
+                android:text="@string/profile_name"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toTopOf="@+id/textNivelPermissaoApp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageLogoPerfil"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/textNivelPermissaoApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/oxanium_semibold"
+                android:gravity="center"
+                android:text="Administrador"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayoutCaixa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageLogoPerfil"
+                app:layout_constraintTop_toBottomOf="@+id/textNomePaginaPerfil" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutCaixa"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageLogoPerfil"
+                app:layout_constraintVertical_bias="0.542">
+
+                <TextView
+                    android:id="@+id/textCargo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/orbitron_black"
+                    android:text="@string/perfil_cargo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textCargoResposta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/oxanium_semibold"
+                    android:text="@string/perfil_cargo_resposta"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textCargo" />
+
+                <TextView
+                    android:id="@+id/textDataAdmissao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/orbitron_black"
+                    android:text="@string/perfil_data_admissão"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textCargoResposta" />
+
+                <TextView
+                    android:id="@+id/textDataAdmissaoResposta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oxanium_semibold"
+                    android:text="@string/perfil_data_admissão_resposta"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDataAdmissao" />
+
+                <TextView
+                    android:id="@+id/textSetor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/orbitron_black"
+                    android:text="@string/perfil_setor"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDataAdmissaoResposta" />
+
+                <TextView
+                    android:id="@+id/textSetorResposta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oxanium_semibold"
+                    android:text="@string/perfil_setor_resposta"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textSetor" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

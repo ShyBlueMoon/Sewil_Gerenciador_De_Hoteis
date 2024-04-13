@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreenActivity">
+
+    <ImageView
+        android:id="@+id/ellipseUmTopo"
+        android:layout_width="209dp"
+        android:layout_height="211dp"
+        android:layout_marginStart="-35dp"
+        android:layout_marginTop="-120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/elipse_1" />
+
+    <ImageView
+        android:id="@+id/ellipseDoisTopo"
+        android:layout_width="137dp"
+        android:layout_height="169dp"
+        android:layout_marginStart="-60dp"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/elipse_2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="304dp"
+        android:layout_height="294dp"
+        app:layout_constraintBottom_toTopOf="@+id/nameLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/logo_sewil" />
+
+    <TextView
+        android:id="@+id/nameLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/orbitron_black"
+        android:shadowColor="#BE10202F"
+        android:shadowDx="-5"
+        android:shadowDy="5"
+        android:shadowRadius="15"
+        android:text="@string/app_name"
+        android:textColor="@color/md_theme_primary"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/ellipseTresAbaixo"
+        android:layout_width="219dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="-100dp"
+        android:layout_marginBottom="-65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/elipse_1" />
+
+    <ImageView
+        android:id="@+id/ellipseQuatroAbaixo"
+        android:layout_width="153dp"
+        android:layout_height="162dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="-100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/elipse_2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

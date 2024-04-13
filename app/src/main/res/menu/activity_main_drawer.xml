@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/menu_top">
+        <item
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/ic_perfil"
+            android:title="@string/nav_perfil"/>
+    </group>
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/menu_bottom">
+        <item
+            android:id="@+id/nav_agendamento_manutencao"
+            android:icon="@drawable/ic_agendamento_manutencao_geral"
+            android:title="@string/menu_agendamento_manutencao_geral" />
+        <item
+            android:id="@+id/nav_controle_estoque"
+            android:icon="@drawable/ic_controle_de_estoque"
+            android:title="@string/menu_controle_estoque" />
+        <item
+            android:id="@+id/nav_gestao_funcionarios"
+            android:icon="@drawable/ic_gestao_de_funcionario"
+            android:title="@string/menu_gestao_funcionarios" />
+        <item
+            android:id="@+id/nav_quartos_limpeza_manutencao"
+            android:icon="@drawable/ic_quartos_limpeza_manutencao"
+            android:title="@string/menu_quartos_limpeza_manutencao" />
+        <item
+            android:id="@+id/nav_agendamento_atividades"
+            android:icon="@drawable/ic_agendamento_de_atividade"
+            android:title="@string/menu_agendamento_atividades" />
+    </group>
+</menu>

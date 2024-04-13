@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Sewil</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">John Tolkien</string>
+    <string name="profile_name">John Tolkien</string>
+    <string name="nav_header_subtitle">Administrador</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_perfil">Perfil</string>
+    <string name="action_perfil">Perfil</string>
+
+    // Testes de Views
+    <string name="view_agendamento_manutencao">Aqui é uma textview de Agendamento de Manutenção Geral</string>
+    <string name="view_controle_estoque">Aqui é uma textview de Controle de Estoque</string>
+    <string name="view_gestao_funcionarios">Aqui é uma textview de Gestaõ de Funcionarios</string>
+    <string name="view_quartos_limpeza_manutencao">Aqui é uma textview de Quartos:Limpeza  </string>
+    <string name="view_agendamento_atividades">Aqui é uma textview de Agendamento de Atividades</string>
+
+    <string name="menu_perfil">Perfil</string>
+    <string name="menu_agendamento_manutencao_geral">Manutenção Geral</string>
+    <string name="menu_controle_estoque">Controle de Estoque</string>
+    <string name="menu_gestao_funcionarios">Gestão de Funcionários</string>
+    <string name="menu_quartos_limpeza_manutencao">Quartos: Limpeza </string>
+    <string name="menu_agendamento_atividades">Agendamento de Atividades</string>
+
+    //Perfil
+    <string name="perfil_cargo">Cargo</string>
+    <string name="perfil_cargo_resposta">Chefe de Manutenção</string>
+    <string name="perfil_data_admissão">Data de Admissão</string>
+    <string name="perfil_data_admissão_resposta">11/01/2015</string>
+    <string name="perfil_setor">Setor</string>
+    <string name="perfil_setor_resposta">Manutenção</string>
+
+</resources>

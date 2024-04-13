@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_perfil">
+
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.luanasilva.sewil.ui.perfil.PerfilFragment"
+        android:label="@string/menu_perfil"
+        tools:layout="@layout/fragment_perfil" />
+
+    <fragment
+        android:id="@+id/nav_agendamento_manutencao"
+        android:name="com.luanasilva.sewil.ui.agendamentomanutencao.AgendamentoManutencaoFragment"
+        android:label="@string/menu_agendamento_manutencao_geral"
+        tools:layout="@layout/fragment_agendamento_manutencao" />
+
+    <fragment
+        android:id="@+id/nav_controle_estoque"
+        android:name="com.luanasilva.sewil.ui.controleestoque.ControleEstoqueFragment"
+        android:label="@string/menu_controle_estoque"
+        tools:layout="@layout/fragment_controle_estoque" />
+
+    <fragment
+        android:id="@+id/nav_gestao_funcionarios"
+        android:name="com.luanasilva.sewil.ui.gestaofuncionarios.GestaoFuncionariosFragment"
+        android:label="@string/menu_gestao_funcionarios"
+        tools:layout="@layout/fragment_gestao_funcionarios" />
+    <fragment
+        android:id="@+id/nav_quartos_limpeza_manutencao"
+        android:name="com.luanasilva.sewil.ui.quartoslimpezamanutencao.QuartosLimpezaManutencaoFragment"
+        android:label="@string/menu_quartos_limpeza_manutencao"
+        tools:layout="@layout/fragment_quartos_limpeza_manutencao" />
+    <fragment
+        android:id="@+id/nav_agendamento_atividades"
+        android:name="com.luanasilva.sewil.ui.agendamentoatividades.AgendamentoAtividadesFragment"
+        android:label="@string/menu_agendamento_atividades"
+        tools:layout="@layout/fragment_agendamento_atividades" />
+
+
+</navigation>

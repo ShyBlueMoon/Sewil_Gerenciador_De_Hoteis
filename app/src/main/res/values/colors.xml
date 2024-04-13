@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_theme_primary">#102030</color>
+    <color name="md_theme_primaryVariant">#253D56</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+
+    <color name="blueish_gray_dark">#445C75</color>
+    <color name="blueish_gray_light">#82939d</color>
+    <color name="light_blue_400">#FF29B6F6</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_600">#FF757575</color>
+
+</resources>
