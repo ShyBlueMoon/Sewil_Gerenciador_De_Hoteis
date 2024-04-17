@@ -7,8 +7,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.luanasilva.sewil.EstoqueRecordsSQLiteDatabase;
-import com.luanasilva.sewil.ItemEstoque;
 import com.luanasilva.sewil.R;
 
 class EstoqueAdapter extends BaseAdapter {
@@ -40,7 +38,9 @@ class EstoqueAdapter extends BaseAdapter {
         convertView = inflater.inflate(R.layout.activity_estoque_lista_item, null);
         ItemEstoque item = db.getEstoque().get(position);
         TextView txtEstoqueItem = convertView.findViewById(R.id.estoque_lista_item);
+        TextView txtQtdItem = convertView.findViewById(R.id.qtd_lista_item);
         txtEstoqueItem.setText(item.getDescricao());
+        txtQtdItem.setText(String.valueOf(item.getQtd()));
         return convertView;
     }
 }

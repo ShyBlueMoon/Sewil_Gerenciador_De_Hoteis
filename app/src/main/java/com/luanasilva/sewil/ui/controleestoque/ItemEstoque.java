@@ -1,4 +1,4 @@
-package com.luanasilva.sewil;
+package com.luanasilva.sewil.ui.controleestoque;
 
 public class ItemEstoque {
     private Long id;

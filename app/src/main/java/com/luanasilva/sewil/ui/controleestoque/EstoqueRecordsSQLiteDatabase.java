@@ -1,4 +1,4 @@
-package com.luanasilva.sewil;
+package com.luanasilva.sewil.ui.controleestoque;
 
 
 import android.content.ContentValues;
@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +34,7 @@ public class EstoqueRecordsSQLiteDatabase {
             return "CREATE TABLE " + TABLE_NAME + " (" +
                     _ID + " INTEGER PRIMARY KEY, " +
                     COLUMN_DESCRICAO + " TEXT, " +
-                    COLUMN_QTD + " INTEGER, ";
+                    COLUMN_QTD + " INTEGER )";
 
         }
     }
@@ -107,7 +108,7 @@ public class EstoqueRecordsSQLiteDatabase {
         return ItensEstoque;
     }
 
-    public Integer removeThreat(ItemEstoque t) {
+    public Integer removerItemEstoque(ItemEstoque t) {
         String args[] = {t.getId().toString()};
 
         return db.delete(
@@ -117,7 +118,7 @@ public class EstoqueRecordsSQLiteDatabase {
         );
     }
 
-    public Integer updateThreat(ItemEstoque e) {
+    public Integer atualizarItemEstoque(ItemEstoque e) {
         String args[] = {e.getId().toString()};
         ContentValues values = new ContentValues();
         values.put(EstoqueTable.COLUMN_DESCRICAO, e.getDescricao());
@@ -141,6 +142,7 @@ public class EstoqueRecordsSQLiteDatabase {
         @Override
         public void onCreate(SQLiteDatabase db) {
             db.execSQL(EstoqueTable.getSQL());
+            Log.d("LOGSEWIL","BANCO CRIADO");
         }
 
         @Override

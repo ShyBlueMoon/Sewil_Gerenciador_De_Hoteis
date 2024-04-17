@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ListView
 import androidx.fragment.app.Fragment
-import com.luanasilva.sewil.EstoqueRecordsSQLiteDatabase
 import com.luanasilva.sewil.R
 import com.luanasilva.sewil.databinding.FragmentControleEstoqueBinding
 
@@ -16,10 +15,9 @@ class ControleEstoqueFragment : Fragment() {
 
     private lateinit var btnItem: Button
     private lateinit var binding: FragmentControleEstoqueBinding
-    //lateinit var db : EstoqueRecordsSQLiteDatabase
-    //private lateinit var lstEstoque: ListView
-    //private lateinit var estoqueAdapter: EstoqueAdapter
 
+    private lateinit var lstEstoque: ListView
+    private lateinit var estoqueAdapter: EstoqueAdapter
 
 
     override fun onCreateView(
@@ -27,30 +25,35 @@ class ControleEstoqueFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentControleEstoqueBinding. inflate(inflater, container,  false)
-        val view = binding.root
-        //val view = inflater.inflate(
-        //R.layout.fragment_controle_estoque, container, false)
+        binding = FragmentControleEstoqueBinding.inflate(inflater, container, false)
+        val view = inflater.inflate(
+            R.layout.fragment_controle_estoque, container, false
+        )
+        val db =  EstoqueRecordsSQLiteDatabase(requireContext())
+        lstEstoque= view.findViewById(R.id.estoque_lista)
+        estoqueAdapter = EstoqueAdapter(requireContext(),db)
+        lstEstoque.adapter = estoqueAdapter
+        //lstEstoque.setOnItemClickListener()//edição
 
+        lstEstoque.setOnItemLongClickListener { parent, view, position, id ->
+            db.removerItemEstoque(estoqueAdapter.getItem(position) as ItemEstoque)
+            estoqueAdapter.notifyDataSetChanged()
+            true
+        }
 
 
         btnItem = view.findViewById(R.id.btn_Item)
-
-
         btnItem.setOnClickListener {
             val intent = Intent(activity, AddItemEstoqueActivity::class.java)
             startActivity(intent)
         }
+        binding = FragmentControleEstoqueBinding.inflate(inflater, container, false)
 
-
-       /*val db =  EstoqueRecordsSQLiteDatabase(requireContext())
-        lstEstoque= view.findViewById(R.id.estoque_lista)
-        estoqueAdapter = EstoqueAdapter(requireContext(),db)
-        lstEstoque.adapter = estoqueAdapter*/
-
-        //binding = FragmentControleEstoqueBinding.inflate(inflater, container, false)
-        //return binding.root
         return view
     }
 
+    override fun onResume(){
+        super.onResume()
+        estoqueAdapter.notifyDataSetChanged()
+    }
 }
