@@ -1,5 +1,7 @@
 package com.luanasilva.sewil.ui.controleestoque
 
+import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +9,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ListView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.luanasilva.sewil.MainActivity
 import com.luanasilva.sewil.R
 import com.luanasilva.sewil.databinding.FragmentControleEstoqueBinding
+import java.text.FieldPosition
+
 
 class ControleEstoqueFragment : Fragment() {
 
@@ -35,12 +41,23 @@ class ControleEstoqueFragment : Fragment() {
         lstEstoque.adapter = estoqueAdapter
         //lstEstoque.setOnItemClickListener()//edição
 
-        lstEstoque.setOnItemLongClickListener { parent, view, position, id ->
-            db.removerItemEstoque(estoqueAdapter.getItem(position) as ItemEstoque)
-            estoqueAdapter.notifyDataSetChanged()
-            true
-        }
 
+
+
+        lstEstoque.setOnItemLongClickListener { parent, view, position, id ->
+            /*val mostarToast = Toast.makeText(activity,"Exclusão efetuada com sucesso", Toast.LENGTH_LONG)
+            mostarToast.show()*/
+            exibirAlertDialog(position,db)
+
+
+
+            /*db.removerItemEstoque(estoqueAdapter.getItem(position) as ItemEstoque)
+            estoqueAdapter.notifyDataSetChanged()
+            exibirAlertDialog(position,db)
+            true*/
+
+
+            }
 
         btnItem = view.findViewById(R.id.btn_Item)
         btnItem.setOnClickListener {
@@ -50,6 +67,22 @@ class ControleEstoqueFragment : Fragment() {
         binding = FragmentControleEstoqueBinding.inflate(inflater, container, false)
 
         return view
+    }
+    private fun exibirAlertDialog(position: Int, db:EstoqueRecordsSQLiteDatabase):Boolean{
+        val alertBuilder = AlertDialog.Builder(requireActivity())
+        alertBuilder.setTitle("Exclusão de Item")
+        alertBuilder.setMessage("Você tem certeza que quer excluir o item selecionado:")
+        alertBuilder.setPositiveButton("Sim"){dialog,posicao ->
+            db.removerItemEstoque(estoqueAdapter.getItem(position)as ItemEstoque)
+            estoqueAdapter.notifyDataSetChanged()
+            true
+        }
+        alertBuilder.setNegativeButton("CANCELAR"){dialog, posicao ->
+            dialog.dismiss()
+        }
+        val alertDialog = alertBuilder.create()
+        alertDialog.show()
+        return true
     }
 
     override fun onResume(){
