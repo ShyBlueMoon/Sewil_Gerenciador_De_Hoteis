@@ -25,6 +25,9 @@ public class EstoqueRecordsSQLiteDatabase {
         db = new EstoqueRecordsSQLiteDatabaseHelper().getWritableDatabase();
     }
 
+
+
+    //-----------------------------------ESTOQUE ------------------------------------------
     public static class EstoqueTable implements BaseColumns {
         public static final String TABLE_NAME = "Estoque";
         public static final String COLUMN_DESCRICAO = "descricao";
@@ -38,6 +41,7 @@ public class EstoqueRecordsSQLiteDatabase {
 
         }
     }
+
 
     public Long addItem(ItemEstoque e) {
         ContentValues values = new ContentValues();
@@ -142,13 +146,15 @@ public class EstoqueRecordsSQLiteDatabase {
         @Override
         public void onCreate(SQLiteDatabase db) {
             db.execSQL(EstoqueTable.getSQL());
-            Log.d("LOGSEWIL","BANCO CRIADO");
+            Log.d("LOGSEWIL","BANCO CRIADO. Tabelas Estoque e Manutenção criadas com sucesso.");
         }
 
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
             db.execSQL("DROP TABLE IF EXISTS " + EstoqueTable.TABLE_NAME);
+
             onCreate(db);
+            Log.d("LOGSEWIL","Tabelas dropadas com sucesso.");
         }
     }
 }

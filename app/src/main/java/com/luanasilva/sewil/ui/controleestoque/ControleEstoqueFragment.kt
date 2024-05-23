@@ -45,8 +45,7 @@ class ControleEstoqueFragment : Fragment() {
 
 
         lstEstoque.setOnItemLongClickListener { parent, view, position, id ->
-            /*val mostarToast = Toast.makeText(activity,"Exclusão efetuada com sucesso", Toast.LENGTH_LONG)
-            mostarToast.show()*/
+            /*val mostarToast = */
             exibirAlertDialog(position,db)
 
 
@@ -71,7 +70,7 @@ class ControleEstoqueFragment : Fragment() {
     private fun exibirAlertDialog(position: Int, db:EstoqueRecordsSQLiteDatabase):Boolean{
         val alertBuilder = AlertDialog.Builder(requireActivity())
         alertBuilder.setTitle("Exclusão de Item")
-        alertBuilder.setMessage("Você tem certeza que quer excluir o item selecionado:")
+        alertBuilder.setMessage("Você tem certeza que quer excluir o item selecionado?")
         alertBuilder.setPositiveButton("Sim"){dialog,posicao ->
             db.removerItemEstoque(estoqueAdapter.getItem(position)as ItemEstoque)
             estoqueAdapter.notifyDataSetChanged()
