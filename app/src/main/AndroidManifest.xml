@@ -19,12 +19,6 @@
             android:name=".ui.controleestoque.AddItemEstoqueActivity"
             android:exported="false" />
         <activity
-            android:name=".estoqueListaItemActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activityEstoqueListaItem"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

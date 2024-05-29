@@ -6,7 +6,7 @@
     <string name="profile_name">John Tolkien</string>
     <string name="nav_header_subtitle">Administrador</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="nav_perfil">Perfil</string>
+    <string name="nav_perfil">Bem-Vindo(a)</string>
     <string name="action_perfil">Perfil</string>
 
     // Testes de Views
