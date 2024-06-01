@@ -3,6 +3,8 @@
     <array name="preloaded_fonts" translatable="false">
 
         <item>@font/orbitron_black</item>
+        <item>@font/orbitron_bold</item>
+        <item>@font/oxanium</item>
         <item>@font/oxanium_semibold</item>
 
     </array>

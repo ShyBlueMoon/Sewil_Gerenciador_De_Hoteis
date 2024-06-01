@@ -2,7 +2,9 @@ package com.luanasilva.sewil
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -27,8 +29,18 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarMain.toolbar)
 
         binding.appBarMain.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            with(binding) {
+                val fabChamadoManutencao = appBarMain.fabMaisManutencao
+                val fabItemEstoque = appBarMain.fabMaisEstoque
+
+                if(fabChamadoManutencao.isVisible && fabItemEstoque.isVisible) {
+                    fabItemEstoque.visibility = View.INVISIBLE
+                    fabChamadoManutencao.visibility = View.INVISIBLE
+                } else {
+                    fabItemEstoque.visibility = View.VISIBLE
+                    fabChamadoManutencao.visibility = View.VISIBLE
+                }
+            }
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -42,6 +54,10 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        with(binding) {
+
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

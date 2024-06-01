@@ -31,22 +31,21 @@
                 android:id="@+id/imageLogoPerfil"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="32dp"
                 android:src="@drawable/logo_sewil"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textNomePaginaPerfil"
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="32dp"
                 android:fontFamily="@font/orbitron_black"
                 android:gravity="center"
                 android:text="SEWIL"
-                android:textSize="34sp"
+                android:textSize="38sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -54,16 +53,15 @@
 
             <TextView
                 android:id="@+id/textNivelPermissaoApp"
-                android:layout_width="0dp"
+                android:layout_width="312dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/oxanium_semibold"
                 android:gravity="center"
                 android:text="Gerenciador de hotéis"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textNomePaginaPerfil" />
 
@@ -76,7 +74,8 @@
                 android:padding="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textNivelPermissaoApp">
 
                 <TextView
                     android:id="@+id/textCargo"
