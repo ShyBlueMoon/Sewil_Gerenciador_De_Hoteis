@@ -5,7 +5,7 @@ Projeto: SEWIL - Gerenciador de Hotéis
 Introdução
 ------------
 
-Aplicativo em desenvolvimento ativo para o o projeto final da Uniftec. Desenvolvido em grupo por Ademir, Gustavo, Luana e Marcello,
+Aplicativo em desenvolvimento ativo para o o projeto final da Uniftec. Desenvolvido em grupo por Ademir, Gustavo, Luana e Marcello, para a cadeira de Projeto Empreenddedor II.
 
 O que esse app faz
 --------------
