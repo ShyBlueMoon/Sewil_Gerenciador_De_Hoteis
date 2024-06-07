@@ -30,5 +30,22 @@
     <string name="perfil_data_admissão_resposta">11/01/2015</string>
     <string name="perfil_setor">Setor</string>
     <string name="perfil_setor_resposta">Manutenção</string>
+    <string name="piscina_e_sala_de_jogos">Piscina e Sala de Jogos</string>
+    <string name="rea_1">Área 1</string>
+    <string name="cozinha_e_restaurante">Cozinha e Restaurante</string>
+    <string name="rea_4">Área 4</string>
+    <string name="quartos_e_corredores">Quartos e Corredores</string>
+    <string name="recep_o_e_sala_de_espera">Recepção e Sala de Espera</string>
+    <string name="rea_3">Área 3</string>
+    <string name="rea_2">Área 2</string>
+    <string name="salvar">Salvar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="digite_suas_observa_es_aqui">Digite suas observações aqui</string>
+    <string name="manuten_o">Manutenção</string>
+    <string name="limpeza_de_quartos">Limpeza de Quartos</string>
+    <string name="digite_o_n_mero_do_quarto">Digite o número do quarto:</string>
+    <string name="autocompletetextview">AutoCompleteTextView</string>
+    <string name="selecione_o_turno">Selecione o turno:</string>
+    <string name="digite_informa_es_extras_aqui">Digite informações extras aqui</string>
 
 </resources>

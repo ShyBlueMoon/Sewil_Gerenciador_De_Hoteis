@@ -20,8 +20,8 @@ class ChamadosAdapter(context: Context,
 
         val chamado = getItem(position)
 
-        val textViewID: TextView = view.findViewById(R.id.textViewID)
-        val textViewNomeArea: TextView = view.findViewById(R.id.textViewNomeArea)
+        val textViewID: TextView = view.findViewById(R.id.textViewIDNumeroQuarto)
+        val textViewNomeArea: TextView = view.findViewById(R.id.textViewQuarto)
         val textViewObservacoes: TextView = view.findViewById(R.id.textViewObservacoes)
 
 
