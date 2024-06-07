@@ -10,10 +10,7 @@ import com.luanasilva.sewil.R
 import com.luanasilva.sewil.database.model.AreasManutencao
 
 class ChamadosAdapter(context: Context,
-                      private val chamados: List<AreasManutencao>
-
-
-) : ArrayAdapter<AreasManutencao>(context, 0, chamados) {
+                      private val chamados: List<AreasManutencao>) : ArrayAdapter<AreasManutencao>(context, 0, chamados) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.list_view_chamados, parent, false)
@@ -22,7 +19,7 @@ class ChamadosAdapter(context: Context,
 
         val textViewID: TextView = view.findViewById(R.id.textViewIDNumeroQuarto)
         val textViewNomeArea: TextView = view.findViewById(R.id.textViewQuarto)
-        val textViewObservacoes: TextView = view.findViewById(R.id.textViewObservacoes)
+        val textViewObservacoes: TextView = view.findViewById(R.id.textViewObservacoesLimpeza)
 
 
 

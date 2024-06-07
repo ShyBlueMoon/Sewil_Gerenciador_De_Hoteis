@@ -36,6 +36,8 @@ class ChamadosDAO(context: Context): IChamadosDAO {
         }
         return true
     }
+
+
     //-----------------------------REMOVER--------------------------------------
     override fun remover(idArea: Int): Boolean {
         val args = arrayOf(idArea.toString())
@@ -51,7 +53,6 @@ class ChamadosDAO(context: Context): IChamadosDAO {
             false
         }
     }
-
 
 
     //----------------------------LISTAR----------------------------------------

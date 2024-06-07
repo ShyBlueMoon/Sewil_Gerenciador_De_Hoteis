@@ -49,7 +49,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewObservacoes"
+        android:id="@+id/textViewObservacoesLimpeza"
         android:layout_width="248dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"

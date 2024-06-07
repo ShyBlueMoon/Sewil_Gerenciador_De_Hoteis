@@ -20,8 +20,8 @@ import com.luanasilva.sewil.databinding.FragmentAgendamentoManutencaoBinding
 
 class AgendamentoManutencaoFragment : Fragment() {
     //Declarar variáveis aqui
-    lateinit var binding: FragmentAgendamentoManutencaoBinding
-    lateinit var listChamadosView: ListView
+    private lateinit var binding: FragmentAgendamentoManutencaoBinding
+    private lateinit var listChamadosView: ListView
     private lateinit var adapter: ChamadosAdapter
 
 
@@ -58,9 +58,7 @@ class AgendamentoManutencaoFragment : Fragment() {
 
         exibirListaChamados()
 
-
     }
-
 
     private fun exibirListaChamados() {
 
@@ -71,7 +69,6 @@ class AgendamentoManutencaoFragment : Fragment() {
         listChamadosView = binding.listAreas
         val chamadosDAO = ChamadosDAO(activity as Context)
         val listaChamados = chamadosDAO.listar()
-
 
 
         adapter = ChamadosAdapter(requireContext(), listaChamados)
