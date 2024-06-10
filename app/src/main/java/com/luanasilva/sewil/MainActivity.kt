@@ -1,5 +1,6 @@
 package com.luanasilva.sewil
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.View
@@ -13,7 +14,11 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
+import com.luanasilva.sewil.databinding.ActivityAddItemEstoqueBinding
 import com.luanasilva.sewil.databinding.ActivityMainBinding
+import com.luanasilva.sewil.ui.agendamentomanutencao.ChamadoManutencaoActivity
+import com.luanasilva.sewil.ui.controleestoque.AddItemEstoqueActivity
+import com.luanasilva.sewil.ui.quartoslimpezamanutencao.NovoChamadoLimpezaActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,14 +37,36 @@ class MainActivity : AppCompatActivity() {
             with(binding) {
                 val fabChamadoManutencao = appBarMain.fabMaisManutencao
                 val fabItemEstoque = appBarMain.fabMaisEstoque
+                val fabLimpezaQuartos = appBarMain.fabLMaisLimpeza
 
-                if(fabChamadoManutencao.isVisible && fabItemEstoque.isVisible) {
+                if(fabChamadoManutencao.isVisible && fabItemEstoque.isVisible && fabLimpezaQuartos.isVisible) {
                     fabItemEstoque.visibility = View.INVISIBLE
                     fabChamadoManutencao.visibility = View.INVISIBLE
+                    fabLimpezaQuartos.visibility = View.INVISIBLE
+
+
                 } else {
                     fabItemEstoque.visibility = View.VISIBLE
                     fabChamadoManutencao.visibility = View.VISIBLE
+                    fabLimpezaQuartos.visibility = View.VISIBLE
+
+                    fabChamadoManutencao.setOnClickListener{
+                        startActivity(Intent(this@MainActivity,ChamadoManutencaoActivity::class.java))
+                    }
+
+                    fabItemEstoque.setOnClickListener {
+                        val intent = Intent(this@MainActivity,AddItemEstoqueActivity::class.java)
+                        startActivity(intent)
+                    }
+
+                    fabLimpezaQuartos.setOnClickListener {
+                        val intent = Intent(this@MainActivity,NovoChamadoLimpezaActivity::class.java)
+                        startActivity(intent)
+                    }
+
                 }
+
+
             }
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout

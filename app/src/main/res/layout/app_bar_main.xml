@@ -29,14 +29,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
 
+        android:layout_marginBottom="28dp"
         android:clickable="true"
         android:foregroundTint="#81929C"
         app:backgroundTint="#102030"
         app:backgroundTintMode="add"
         app:srcCompat="@android:drawable/ic_input_add"
-        app:tint="#81929C" />
+        app:tint="#81929C"
+        app:useCompatPadding="true" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabMaisManutencao"
@@ -51,18 +52,33 @@
         app:layout_anchor="@+id/fab"
         app:layout_anchorGravity="right|top"
         app:srcCompat="@drawable/ic_fab_manutencao"
-        app:useCompatPadding="true" />
+        app:useCompatPadding="false"
+        tools:visibility="visible" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabMaisEstoque"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
+        android:layout_gravity="center_horizontal|center_vertical"
         android:clickable="true"
         android:visibility="gone"
         app:layout_anchor="@+id/fab"
-        app:layout_anchorGravity="start|left"
+        app:layout_anchorGravity="start|top"
         app:srcCompat="@drawable/ic_fab_estoque"
-        app:useCompatPadding="true" />
+        app:useCompatPadding="false"
+        tools:visibility="visible" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLMaisLimpeza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal|center_vertical"
+        android:clickable="true"
+        android:visibility="gone"
+        app:layout_anchor="@+id/fabMaisEstoque"
+        app:layout_anchorGravity="start|bottom"
+        app:srcCompat="@drawable/ic_limpeza"
+        app:useCompatPadding="false"
+        tools:visibility="visible" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
